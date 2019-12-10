@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29519.87
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "study-cards-api", "study-cards-api\study-cards-api.csproj", "{80AE9417-5BEC-441E-8135-5792DE1AD870}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{80AE9417-5BEC-441E-8135-5792DE1AD870}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80AE9417-5BEC-441E-8135-5792DE1AD870}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80AE9417-5BEC-441E-8135-5792DE1AD870}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80AE9417-5BEC-441E-8135-5792DE1AD870}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C1D1C76D-2F43-4877-B87F-F46B7D40D1EC}
+	EndGlobalSection
+EndGlobal
