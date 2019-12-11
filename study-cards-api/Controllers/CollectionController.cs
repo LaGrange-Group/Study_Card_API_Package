@@ -23,8 +23,5 @@ namespace study_cards_api.Controllers
             string json = JsonConvert.SerializeObject(collections);
             return json;
         }
-
-
-
     }
 }
