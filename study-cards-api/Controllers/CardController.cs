@@ -42,15 +42,15 @@ namespace study_cards_api.Controllers
             return NoContent();
         }
 
-        [HttpDelete]
-        public IActionResult Delete([FromBody] Card card)
+        [HttpDelete("{stackId}/{cardStackId}")]
+        public IActionResult Delete(int stackId, int cardStackId)
         {
-            Card dbCard = _context.Cards.Where(c => c.StackId == card.StackId && c.CardStackId == card.Id).FirstOrDefault();
+            Card dbCard = _context.Cards.Where(c => c.StackId == stackId && c.CardStackId == cardStackId).FirstOrDefault();
             if (dbCard == null)
                 return BadRequest();
             _context.Cards.Remove(dbCard);
             _context.SaveChanges();
-            UpdateCardStackIds(card.StackId);
+            UpdateCardStackIds(stackId);
             return NoContent();
         }
 
