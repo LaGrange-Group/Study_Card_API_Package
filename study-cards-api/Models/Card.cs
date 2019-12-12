@@ -11,9 +11,11 @@ namespace study_cards_api.Models
     {
         [Key]
         public int Id { get; set; }
-        public int CardStackId { get; set; }
+        [Required(ErrorMessage = "Must include the word property.")]
         public string Word { get; set; }
+        [Required(ErrorMessage = "Must include the definition property.")]
         public string Definition { get; set; }
+
         [ForeignKey(nameof(Stack))]
         public int StackId { get; set; }
         public Stack Stack { get; set; }

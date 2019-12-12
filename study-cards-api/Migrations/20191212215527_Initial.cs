@@ -12,7 +12,7 @@ namespace study_cards_api.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Title = table.Column<string>(nullable: true)
+                    Title = table.Column<string>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -25,9 +25,8 @@ namespace study_cards_api.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    CardStackId = table.Column<int>(nullable: false),
-                    Word = table.Column<string>(nullable: true),
-                    Definition = table.Column<string>(nullable: true),
+                    Word = table.Column<string>(nullable: false),
+                    Definition = table.Column<string>(nullable: false),
                     StackId = table.Column<int>(nullable: false)
                 },
                 constraints: table =>

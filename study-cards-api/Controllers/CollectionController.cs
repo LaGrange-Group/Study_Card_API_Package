@@ -19,7 +19,7 @@ namespace study_cards_api.Controllers
         [HttpGet]
         public string Get()
         {
-            var collections = _context.Stacks.Select(s => new { id = s.Id, title = s.Title, cards = _context.Cards.Where(c => c.StackId == s.Id).Select(c => new { id = c.CardStackId, word = c.Word, definition = c.Definition }).ToArray() });
+            var collections = _context.Stacks.Select(s => new { id = s.Id, title = s.Title, cards = _context.Cards.Where(c => c.StackId == s.Id).Select(c => new { id = c.Id, word = c.Word, definition = c.Definition }).ToArray() });
             string json = JsonConvert.SerializeObject(collections);
             return json;
         }

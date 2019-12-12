@@ -35,18 +35,18 @@ namespace study_cards_api.Controllers
                 return BadRequest();
             dbStack.Title = stack.Title;
             _context.SaveChanges();
-            return NoContent();
+            return Ok();
         }
 
-        [HttpDelete]
-        public IActionResult Delete([FromBody] Stack stack)
+        [HttpDelete("{id}")]
+        public IActionResult Delete(int id)
         {
-            Stack dbStack = _context.Stacks.Find(stack.Id);
+            Stack dbStack = _context.Stacks.Find(id);
             if (dbStack == null)
                 return BadRequest();
             _context.Stacks.Remove(dbStack);
             _context.SaveChanges();
-            return NoContent();
+            return Ok();
         }
     }
 }

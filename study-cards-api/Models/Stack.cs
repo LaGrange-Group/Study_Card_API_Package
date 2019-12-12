@@ -10,6 +10,7 @@ namespace study_cards_api.Models
     {
         [Key]
         public int Id { get; set; }
+        [Required(ErrorMessage = "Must include a title property.")]
         public string Title { get; set; }
     }
 }

@@ -23,16 +23,16 @@ namespace study_cards_api.Migrations
 
             migrationBuilder.InsertData(
                 table: "Cards",
-                columns: new[] { "Id", "CardStackId", "Definition", "StackId", "Word" },
+                columns: new[] { "Id", "Definition", "StackId", "Word" },
                 values: new object[,]
                 {
-                    { 1, 1, "JS object that holds values for a component", 1, "state" },
-                    { 2, 2, "A way to pass data into components on initialization", 1, "props" },
-                    { 3, 3, "Reusable building blocks for UI using JSX", 1, "component" },
-                    { 4, 1, "Named space in memory", 2, "variable" },
-                    { 5, 2, "Template for an object that consists of member variables, constructor, methods", 2, "class" },
-                    { 6, 3, "Instance of a class", 2, "object" },
-                    { 7, 1, "Reusable component in Flutter", 3, "widget" }
+                    { 1, "JS object that holds values for a component", 1, "state" },
+                    { 2, "A way to pass data into components on initialization", 1, "props" },
+                    { 3, "Reusable building blocks for UI using JSX", 1, "component" },
+                    { 4, "Named space in memory", 2, "variable" },
+                    { 5, "Template for an object that consists of member variables, constructor, methods", 2, "class" },
+                    { 6, "Instance of a class", 2, "object" },
+                    { 7, "Reusable component in Flutter", 3, "widget" }
                 });
         }
 

@@ -9,7 +9,7 @@ using study_cards_api.Data;
 namespace study_cards_api.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20191210145107_Initial")]
+    [Migration("20191212215527_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -27,16 +27,15 @@ namespace study_cards_api.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("CardStackId")
-                        .HasColumnType("int");
-
                     b.Property<string>("Definition")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("StackId")
                         .HasColumnType("int");
 
                     b.Property<string>("Word")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
@@ -54,6 +53,7 @@ namespace study_cards_api.Migrations
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("Title")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");

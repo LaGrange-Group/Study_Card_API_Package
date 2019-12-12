@@ -9,7 +9,7 @@ using study_cards_api.Data;
 namespace study_cards_api.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20191210145305_SeedData")]
+    [Migration("20191212215747_SeedData")]
     partial class SeedData
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -27,16 +27,15 @@ namespace study_cards_api.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("CardStackId")
-                        .HasColumnType("int");
-
                     b.Property<string>("Definition")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("StackId")
                         .HasColumnType("int");
 
                     b.Property<string>("Word")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
@@ -49,7 +48,6 @@ namespace study_cards_api.Migrations
                         new
                         {
                             Id = 1,
-                            CardStackId = 1,
                             Definition = "JS object that holds values for a component",
                             StackId = 1,
                             Word = "state"
@@ -57,7 +55,6 @@ namespace study_cards_api.Migrations
                         new
                         {
                             Id = 2,
-                            CardStackId = 2,
                             Definition = "A way to pass data into components on initialization",
                             StackId = 1,
                             Word = "props"
@@ -65,7 +62,6 @@ namespace study_cards_api.Migrations
                         new
                         {
                             Id = 3,
-                            CardStackId = 3,
                             Definition = "Reusable building blocks for UI using JSX",
                             StackId = 1,
                             Word = "component"
@@ -73,7 +69,6 @@ namespace study_cards_api.Migrations
                         new
                         {
                             Id = 4,
-                            CardStackId = 1,
                             Definition = "Named space in memory",
                             StackId = 2,
                             Word = "variable"
@@ -81,7 +76,6 @@ namespace study_cards_api.Migrations
                         new
                         {
                             Id = 5,
-                            CardStackId = 2,
                             Definition = "Template for an object that consists of member variables, constructor, methods",
                             StackId = 2,
                             Word = "class"
@@ -89,7 +83,6 @@ namespace study_cards_api.Migrations
                         new
                         {
                             Id = 6,
-                            CardStackId = 3,
                             Definition = "Instance of a class",
                             StackId = 2,
                             Word = "object"
@@ -97,7 +90,6 @@ namespace study_cards_api.Migrations
                         new
                         {
                             Id = 7,
-                            CardStackId = 1,
                             Definition = "Reusable component in Flutter",
                             StackId = 3,
                             Word = "widget"
@@ -112,6 +104,7 @@ namespace study_cards_api.Migrations
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("Title")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
